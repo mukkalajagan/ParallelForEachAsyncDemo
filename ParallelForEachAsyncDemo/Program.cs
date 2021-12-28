@@ -26,10 +26,5 @@ await Parallel.ForEachAsync(userHandlers, parallelOptions, async (uri, token) =>
     Console.WriteLine($"Name: {user.Name}\nBio: {user.Bio}\n");
 });
 Console.ReadLine();
-public class GitHubUser
-{
-    public string Name { get; set; }
-    public string Bio { get; set; }
-}
 
-//public record GitHubUser(string Name, string Bio);
+public record GitHubUser(string Name, string Bio);
